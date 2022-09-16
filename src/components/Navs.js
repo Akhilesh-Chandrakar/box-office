@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const LINKS=[
-    {to:'/' , text: 'Home'},
-    {to:'/starred', text:'starred'}
-]
+
+const LINKS = [
+  { to: '/', text: 'Home' },
+  { to: '/starred', text: 'Starred' },
+];
+
 const Navs = () => {
   return (
     <div>
-      <ui>
-        {LINKS.map(item=>(
-            <li key={item.do}>
-             <Link to ={item.do}> {item.text}</Link>
-            </li>
+      <ul>
+        {LINKS.map(item => (
+          <li key={item.to}>
+            <Link to={item.to}>{item.text}</Link>
+          </li>
         ))}
-       
-      </ui>
+      </ul>
     </div>
   );
 };
 
 export default Navs;
+
